@@ -10,12 +10,12 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from smtplib import SMTP_SSL
 
-stop
+
 
 # 邮箱帐号设置，"aLing@qq.com"赋值给mailUser Aye
-mailUser = "lwj-jack@qq.com"
+mailUser = "用户邮箱"
 # 邮箱授权码设置，"abcnawckdujkdace"赋值给mailPass
-mailPass = "wxszyllauuwtdfgd"
+mailPass = "邮箱授权码"
 
 # 使用smtplib.SMTP_SSL(服务器, 端口号),端口号为465，赋值给smtpObj
 smtpObj: SMTP_SSL = smtplib.SMTP_SSL("smtp.qq.com", 465)
@@ -23,8 +23,8 @@ smtpObj: SMTP_SSL = smtplib.SMTP_SSL("smtp.qq.com", 465)
 smtpObj.login(mailUser, mailPass)
 
 # 发件人、收件人
-sender = "lwj-jack@qq.com"
-addressee = {"zxq": "2903553737@qq.com", "wsf": "1758088628@qq.com", "gaj": "1057518707@qq.com"}
+sender = "发件人"
+addressee = {"收件人": "收件人邮箱"}
 
 for mail in addressee:
 
